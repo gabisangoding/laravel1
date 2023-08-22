@@ -1,0 +1,29 @@
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur possimus eveniet labore libero autem facilis vitae beatae quaerat, alias quo recusandae rerum architecto necessitatibus eum ut maiores quis et quidem id earum aliquam consequuntur quia veniam! Eligendi ad, facere quia minus eaque dolores repudiandae minima architecto ratione laudantium nostrum aliquam provident dolore adipisci molestias ipsam excepturi expedita non ipsa odio, amet quod quae nam. Odio consequatur soluta similique adipisci voluptates nostrum id aspernatur ab quidem! Culpa quia totam, repudiandae nulla natus porro aut cupiditate a animi asperiores vitae fuga nam temporibus magnam corporis aspernatur iusto ipsam soluta molestias maiores eius eaque dolorem distinctio dolore? Possimus necessitatibus recusandae quo est non.
+
+
+
+
+
+==================================================================
+Post::create([
+    'title' => 'Judul Ketiga',
+    'category_id' => '3',
+    'slug' => 'judul-ketiga',
+    'excerpt' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur possimus eveniet labore libero autem facilis vitae beatae quaerat',
+    'body' => '<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur possimus eveniet labore libero autem facilis vitae beatae quaerat</p><p>alias quo recusandae rerum architecto necessitatibus eum ut maiores quis et quidem id earum aliquam consequuntur quia veniam! Eligendi ad, facere quia minus eaque dolores repudiandae minima architecto ratione laudantium nostrum aliquam provident dolore adipisci molestias ipsam excepturi expedita non ipsa odio, amet quod quae nam.</p><p>Odio consequatur soluta similique adipisci voluptates nostrum id aspernatur ab quidem! Culpa quia totam, repudiandae nulla natus porro aut cupiditate a animi asperiores vitae fuga nam temporibus magnam corporis aspernatur iusto ipsam soluta molestias maiores eius eaque dolorem distinctio dolore? Possimus necessitatibus recusandae quo est non.</p>'])
+
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Post extends Model
+{
+    use HasFactory;
+
+    protected   $fillable =['title', 'excerpt', 'body'], //agar bisa diisi langsung banyak lewat php artisan tinker menggunakan array[]
+                $guarded = ['id'];
+
+}
